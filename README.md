@@ -3,9 +3,9 @@ Backend for my Chat application, JChat, done with Java, Spring Boot and WebSocke
 
 ### Prerequisites
 
-Java Development Kit (JDK) 17 or higher
-Maven
-IDE (IntelliJ IDEA, Eclipse, VSCOde, etc.)
+- Java Development Kit (JDK) 17 or higher
+- Maven
+- IDE (IntelliJ IDEA, Eclipse, VSCOde, etc.)
 
 ### Getting Started
 
