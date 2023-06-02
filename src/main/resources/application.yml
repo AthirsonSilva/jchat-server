@@ -4,7 +4,8 @@ server:
 spring:
   data:
     mongodb:
-      uri: mongodb://localhost:27017/jchat
+      uri: ${MONGO_URL:mongodb://localhost:27017/jchat}
+      database: jchat
 
 springdoc:
   show-actuator: true
