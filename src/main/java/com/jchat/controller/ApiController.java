@@ -12,7 +12,7 @@ import java.util.List;
 @RequestMapping("/api/v1/messages")
 @RequiredArgsConstructor
 @Log4j2
-@CrossOrigin(origins = "*", allowedHeaders = "*", exposedHeaders = "*", allowCredentials = "true", maxAge = 3600)
+@CrossOrigin(origins = "*", allowedHeaders = "*", exposedHeaders = "*", maxAge = 3600)
 public class ApiController {
     private final MessageService messageService;
 

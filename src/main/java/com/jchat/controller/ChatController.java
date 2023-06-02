@@ -14,7 +14,7 @@ import org.springframework.web.bind.annotation.CrossOrigin;
 @Controller
 @RequiredArgsConstructor
 @Log4j2
-@CrossOrigin(origins = "*", allowedHeaders = "*", exposedHeaders = "*", allowCredentials = "true", maxAge = 3600)
+@CrossOrigin(origins = "*", allowedHeaders = "*", exposedHeaders = "*", maxAge = 3600)
 public class ChatController {
     private final SimpMessagingTemplate simpMessagingTemplate;
     private final MessageService messageService;

@@ -13,7 +13,6 @@ public class CorsConfig {
         corsConfiguration.addAllowedOriginPattern("*");
         corsConfiguration.addAllowedHeader("*");
         corsConfiguration.addAllowedMethod("*");
-        corsConfiguration.setAllowCredentials(true);
 
         return corsConfiguration;
     }
