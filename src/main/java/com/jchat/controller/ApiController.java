@@ -17,6 +17,7 @@ public class ApiController {
     private final MessageService messageService;
 
     @GetMapping
+    @CrossOrigin(origins = "*", allowedHeaders = "*", exposedHeaders = "*", maxAge = 3600)
     public List<Message> fetchPreviousRoomMessages(@RequestParam("room") String room) {
         return messageService.fetchPreviousRoomMessages(room);
     }
