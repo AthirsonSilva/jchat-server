@@ -6,15 +6,15 @@ import org.springframework.web.cors.CorsConfiguration;
 
 @Configuration
 public class CorsConfig {
-    @Bean
-    public CorsConfiguration corsConfiguration() {
-        CorsConfiguration corsConfiguration = new CorsConfiguration();
+	@Bean
+	public CorsConfiguration corsConfiguration() {
+		CorsConfiguration corsConfiguration = new CorsConfiguration();
 
-        corsConfiguration.addAllowedOriginPattern("*");
-        corsConfiguration.addAllowedOrigin("*");
-        corsConfiguration.addAllowedHeader("*");
-        corsConfiguration.addAllowedMethod("*");
+		corsConfiguration.addAllowedOriginPattern("*");
+		corsConfiguration.addAllowedOrigin("*");
+		corsConfiguration.addAllowedHeader("*");
+		corsConfiguration.addAllowedMethod("*");
 
-        return corsConfiguration;
-    }
+		return corsConfiguration;
+	}
 }

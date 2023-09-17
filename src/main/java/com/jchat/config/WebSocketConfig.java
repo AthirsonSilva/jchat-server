@@ -11,19 +11,19 @@ import org.springframework.web.socket.config.annotation.WebSocketMessageBrokerCo
 @EnableWebSocketMessageBroker
 @CrossOrigin(origins = "*", allowedHeaders = "*", exposedHeaders = "*", maxAge = 3600)
 public class WebSocketConfig implements WebSocketMessageBrokerConfigurer {
-    @Override
-    public void registerStompEndpoints(StompEndpointRegistry registry) {
-        registry.addEndpoint("/ws")
-                .setAllowedOriginPatterns("*")
-                .setAllowedOrigins("*")
-                .withSockJS();
-    }
+	@Override
+	public void registerStompEndpoints(StompEndpointRegistry registry) {
+		registry.addEndpoint("/ws")
+				.setAllowedOrigins(
+						new String[] { "http://localhost:3000", "http://localhost:8080", "jchat-server.up.railway.app" })
+				.withSockJS();
+	}
 
-    @Override
-    public void configureMessageBroker(MessageBrokerRegistry registry) {
-        registry.setApplicationDestinationPrefixes("/app");
-        registry.enableSimpleBroker("/chatroom","/user");
-        registry.setUserDestinationPrefix("/user");
-        registry.setPreservePublishOrder(true);
-    }
+	@Override
+	public void configureMessageBroker(MessageBrokerRegistry registry) {
+		registry.setApplicationDestinationPrefixes("/app");
+		registry.enableSimpleBroker("/chatroom", "/user");
+		registry.setUserDestinationPrefix("/user");
+		registry.setPreservePublishOrder(true);
+	}
 }
