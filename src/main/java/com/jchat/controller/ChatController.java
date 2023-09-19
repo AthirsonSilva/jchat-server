@@ -17,7 +17,7 @@ import lombok.extern.log4j.Log4j2;
 @RequiredArgsConstructor
 @Log4j2
 // array of origins can be specified
-@CrossOrigin(origins = "http://localhost:3000")
+@CrossOrigin(origins = "*", allowedHeaders = "*", exposedHeaders = "*", maxAge = 3600)
 public class ChatController {
 	private final SimpMessagingTemplate simpMessagingTemplate;
 	private final MessageService messageService;
